@@ -1,0 +1,73 @@
+name: Proof HTML
+author: step-security
+description: Validate your HTML and CSS and check for broken links.
+
+inputs:
+  directory:
+    description: The directory to scan
+    required: true
+  check_html:
+    description: Validate HTML
+    required: false
+  check_css:
+    description: Validate CSS
+    required: false
+  validator_ignore:
+    description: Regex of HTML/CSS validator errors to ignore
+    required: false
+  check_external_hash:
+    description: Check whether external anchors exist
+    required: false
+  check_opengraph:
+    description: Check images and URLs in Open Graph metadata
+    required: false
+  check_favicon:
+    description: Check whether favicons are valid
+    required: false
+  ignore_empty_alt:
+    description: Allow images with empty alt tags
+    required: false
+  ignore_missing_alt:
+    description: Allow images with missing alt tags
+    required: false
+  allow_missing_href:
+    description: Allow anchors with missing href tags
+    required: false
+  enforce_https:
+    description: Require that links use HTTPS
+    required: false
+  tokens:
+    description: JSON-encoded map of domains to authorization tokens
+    required: false
+  swap_urls:
+    description: JSON-encoded map of URL rewrite rules
+    required: false
+  max_concurrency:
+    description: Maximum number of concurrent requests
+    required: false
+  connect_timeout:
+    description: HTTP connection timeout
+    required: false
+  timeout:
+    description: HTTP request timeout
+    required: false
+  disable_external:
+    description: Disables the external link checker
+    required: false
+  ignore_url:
+    description: Newline-separated list of URLs to ignore
+    required: false
+  ignore_url_re:
+    description: Newline-separated list of URL regexes to ignore
+    required: false
+  retries:
+    description: Number of times to retry checking links
+    required: false
+
+runs:
+  using: docker
+  image: "Dockerfile"
+
+branding:
+  icon: check-square
+  color: green
