@@ -141,8 +141,6 @@ jobs:
             https://en.wikipedia.org/wiki/Main_Page
           ignore_url_re: |
             ^https://twitter.com/
-          swap_urls: |
-            {"^https://www.anishathalye.com/": "/"}
 ```
 
 ## Running locally
