@@ -1,0 +1,19 @@
+# ===========================
+# Log4j 1.x – Non-Exploitable
+# ===========================
+# Rationale:
+# vnu.jar uses only the Log4j ConsoleAppender. None of the vulnerable
+# components (JMSAppender, SocketServer, Chainsaw, JDBCAppender, etc.)
+# are present, configured, or reachable. No logging configuration is
+# user-controlled. Therefore, these CVEs are not exploitable in our use
+# case (CLI mode only, no network listeners, no untrusted input passed
+# into logging).
+#
+# Allowed for this image only.
+
+CVE-2023-26464  # Log4j 1.x – insecure deserialization paths; not exploitable because ConsoleAppender only
+CVE-2022-23302  # Log4j JMSSink; not used, no JMS classes loaded
+CVE-2021-4104   # Log4j JMSAppender remote code execution; not used
+CVE-2022-23307  # Log4j Chainsaw vulnerability; Chainsaw not present/configured
+CVE-2022-23305  # Log4j SocketServer vulnerability; server not used
+CVE-2019-17571  # Log4j SocketServer class; not reachable, ConsoleAppender only
