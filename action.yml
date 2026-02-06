@@ -66,7 +66,7 @@ inputs:
 
 runs:
   using: docker
-  image: "docker://ghcr.io/step-security/proof-html:v2.2.4@sha256:c8ae97dc1c2c26e1431738b0d6ca163cc529d5147c99c04486f1b22f76719399" #v2.2.4
+  image: "docker://ghcr.io/step-security/proof-html:v2.2.5@sha256:23de93bafa8bdc36c63348ef437b4fc1d0a167c1a1d02190a03236fad3ab54eb" #v2.2.5
 
 branding:
   icon: check-square
