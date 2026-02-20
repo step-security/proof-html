@@ -14,7 +14,7 @@ RUN cd validator \
 
 RUN cd validator \
     && sed -i 's/jetty-version" value="11.0.20"/jetty-version" value="11.0.25"/' build/build.xml \
-    && sed -i 's/commons-fileupload-version" value="2.0.0-M2"/commons-fileupload-version" value="2.0.0-M4"/' build/build.xml \
+    && sed -i 's/commons-fileupload-version" value="2.0.0-M2"/commons-fileupload-version" value="2.0.0-M4"/' build/build.xml
 
 RUN cd validator \
     && JAVA_HOME=/usr/lib/jvm/java-25-openjdk python checker.py dldeps
