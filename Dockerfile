@@ -25,7 +25,7 @@ RUN cd validator \
 FROM base
 
 RUN apk --no-cache add build-base linux-headers ruby-dev
-RUN apk --no-cache add curl
+RUN apk --no-cache add curl jq
 RUN gem install html-proofer -v 5.2.0
 
 RUN apk --no-cache add bash
