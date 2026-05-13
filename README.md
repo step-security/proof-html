@@ -1,3 +1,5 @@
+[![StepSecurity Maintained Action](https://raw.githubusercontent.com/step-security/maintained-actions-assets/main/assets/maintained-action-banner.png)](https://docs.stepsecurity.io/actions/stepsecurity-maintained-actions)
+
 # proof-html
 
 proof-html is a [GitHub Action](https://github.com/features/actions) to validate HTML and CSS using the [Nu HTML Validator](https://github.com/validator/validator) and check links, images, and more using [HTMLProofer](https://github.com/gjtorikian/html-proofer).
